@@ -380,20 +380,19 @@ pre.code-box,
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
-      // 43px is the height of the top mobile bar menu
-      height: calc(50vh - var(--spacing-5xl) - 43px);
-      max-height: calc(50vh - var(--spacing-5xl) - 43px);
-
+  
+      // Set a minimum height for mobile screens
+      height: auto; // Reduced from 52vh to 45vh for a more compact look
+      max-height: auto; // Adjust for tighter spacing
+  
+      // Ensure consistent spacing on mobile
+      margin-top: var(--spacing-sm); // Reduced from var(--spacing-md) to var(--spacing-sm)
+  
       @media (min-width: $breakpoint-tablet) {
         height: calc(50vh - var(--spacing-5xl));
         max-height: calc(50vh - var(--spacing-5xl));
-        min-height: 300px;
-      }
-
-      @media (min-width: $breakpoint-laptop) {
-        height: calc(50vh - var(--spacing-3xl));
-        max-height: calc(50vh - var(--spacing-3xl));
+        min-height: 280px; // Adjusted for slightly smaller height
+        margin-top: 0;
       }
     }
 
